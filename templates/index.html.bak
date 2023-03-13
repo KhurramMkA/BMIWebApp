@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+   <head>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <title>Welcome to Flask App</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <!--link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename = 'css/style.css') }}"-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+      <script src='main.js'></script>
+   </head>
+    
+   <h1>This is my Index Page</h1>
+    
+   <body class="main">
+      <div>
+         <p> Enter your name </p>
+           
+         <form class="pure-form" method="POST" action="/">
+                    Name:<br><input type="text" name="username"><br>
+                    City:<br><input type="text" name="usercity"><br>
+					Weight:<br><input type="text" name="weight"><br>
+					Height:<br><input type="text" name="height"><br>
+					<button type="submit" class="pure-button pure-button-primary" value="Submit">Submit</button>
+         </form>
+           
+      </div>
+           <br>     
+      <div>
+                 {% if name %}
+         <p>Welcome to my site {{name}}</p>
+         <p>Your city is {{city}}</p>
+		 <p>Your BMI is {{result}}</p>
+                 {% endif %}
+      </div>
+       
+   </body>
+    
+</html>
